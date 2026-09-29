@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import { produtosService } from '../Service/produto.services.js';
 
 export const router = Router();
@@ -16,8 +16,4 @@ router.post("/", async(req,res)=>{
         quantidade_estoque:20
     })
     return res.status(201).json(produto)
-
-}
-
-
-)
+})

@@ -1,11 +1,11 @@
-import express from 'express'
-import { router } from '../routes/produtos.routes.js'
+import express from 'express';
+import { router } from './Router/produtos.routes.js';
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
 app.use(express.json());
-app.get('/produto', router)
+app.use('/produto', router)
 app.listen(port, () =>{
-    console.log(`API rodando em: http://localhost:3000${port}`)
-})
+    console.log(`API rodando em: http://localhost:${port}`)
+});
