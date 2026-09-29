@@ -7,7 +7,7 @@ class ProdutosService{
 
     }
     async create(nome,marca,categaria,preco,quantidade_estoque){
-        const res =await pool.querry("INSERT INTO produto VALUES($1, 2$, 3$, 4$, 5$) RETURNING",
+        const res =await pool.query("INSERT INTO produto VALUES($1, 2$, 3$, 4$, 5$) RETURNING",
             [nome,marca,categaria,preco,quantidade_estoque]);
             return res.rows[0];
 
